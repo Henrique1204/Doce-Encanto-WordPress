@@ -1,0 +1,97 @@
+@import "_slide";
+
+// Galeria
+.galeria {
+    padding: $d-grande 0;
+    margin-top: 40px;
+    background-color: $secundaria;
+
+    h1 {
+        @include titulo-sessao($branco-1);
+    }
+
+    & > p {
+        @include subtitulo-sessao($branco-2);
+    }
+
+    .fotos {
+        display: grid;
+        grid-template-areas: "foto-1 foto-1" "foto-2 foto-3" "titulo titulo";
+        gap: 20px;
+
+        .f1 {
+            height: 200px;
+            grid-area: foto-1;
+            background-color: #000;
+        }
+
+        .f2 {
+            height: 200px;
+            grid-area: foto-2;
+            background-color: #000;
+        }
+
+        .f3 {
+            height: 200px;
+            grid-area: foto-3;
+            background-color: #000;
+        }
+
+        h2 {
+            font-family: $titulo;
+            font-size: em(20);
+            text-align: center;
+            color: $branco-1;
+            grid-area: titulo;
+        }
+
+        @include responsividade() {
+            grid-template-areas: "titulo" "foto-1" "foto-2" "foto-3";
+
+            h2 {
+                margin-top: $d-pequena;
+            }
+        }
+    }
+}
+
+// Orçamento
+.orcamento {
+    padding: $d-grande 0;
+    @include forms($secundaria);
+
+    .container {
+        margin-top: $d-media;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    h1 {
+        @include titulo-sessao;
+        margin-bottom: $d-grande;
+    }
+
+    p {
+        @include grid(4);
+
+        font-family: $corpo-texto;
+        font-size: em(16);
+        line-height: 1.4em;
+        color: $cinza-1;
+
+        a {
+            color: $secundaria;
+            text-decoration: underline;
+            transition: 0.3s;
+
+            &:hover {
+                color: $hover;
+            }
+        }
+
+        @include responsividade() {
+            margin-top: $d-media;
+            text-align: center;
+        }
+    }
+}

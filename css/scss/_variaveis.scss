@@ -1,0 +1,123 @@
+// Cores
+$primaria: #F4837D;
+$secundaria: #FF9C99;
+$branco-1: #F8F8F8;
+$branco-2: #F4F4F4;
+$cinza-1: #859A9E;
+$cinza-2: #A6BDBD;
+$hover: #D46155;
+
+// Fontes
+$titulo: 'Merriweather Sans', sans-serif;
+$corpo-texto: 'Poly', serif;
+
+// Distâncias
+$d-pequena: 20px;
+$d-media: 40px;
+$d-grande: 60px;
+
+// Mixin sombra
+@mixin sombra($sombra...) {
+    -webkit-box-shadow: $sombra;
+    -moz-box-shadow: $sombra;
+    box-shadow: $sombra;
+}
+
+// Mixin titulo de sessão
+@mixin titulo-sessao($cor: $primaria) {
+    margin: 0 auto;
+    font-family: $titulo;
+    font-size: em(28);
+    font-weight: bold;
+    text-align: center;
+    color: $cor;
+
+    &::after, &::before {
+        content: "";
+        width: 40px;
+        height: 3px;
+        margin: 0 10px 7px 10px;
+        background-color: currentColor;
+        display: inline-block;
+    }
+}
+
+@mixin  subtitulo-sessao($cor: $cinza-1) {
+    max-width: 300px;
+    margin: $d-pequena auto $d-media;
+    font-family: $corpo-texto;
+    font-size: em(18);
+    text-align: center;
+    color: $cor;
+}
+
+// Botão do site
+@mixin btn {
+    padding: 12px $d-pequena 10px;
+    border-radius: 5px;
+    font-family: $titulo;
+    font-size: em(18);
+    text-transform: uppercase;
+    color: $secundaria;
+    border: 3px solid;
+    display: inline-block;
+    transition: 0.4s;
+
+    &:hover {
+        color: $hover;
+    }
+}
+
+// Forms do site
+@mixin forms($cor) {
+    form {
+        @include grid(6);
+
+        .campo {
+            margin-bottom: $d-pequena;
+
+            label {
+                margin-bottom: 5px;
+                font-family: $corpo-texto;
+                font-size: em(18);
+                color: $cor;
+                display: block;
+            }
+
+            input, textarea {
+                width: 100%;
+                padding: 10px;
+                border: 2px solid $primaria;
+                border-radius: 5px;
+                font-family: $corpo-texto;
+                font-size: em(16);
+                letter-spacing: 0.1em;
+                color: #222;
+                background-color: rgba(248, 248, 248, 0.5);
+                outline: none;
+                transition: 0.2s;
+
+                &:focus {
+                    border-color: $branco-1;
+                }
+            }
+        }
+
+        button {
+            @include btn;
+            color: $primaria;
+            background-color: rgba(248, 248, 248, 0.5);
+            cursor: pointer;
+
+            @include responsividade() {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// Converter valores para em
+@function em($pixel, $padrao_navegador: 16)
+{
+    @return ($pixel / $padrao_navegador) * 1em;
+}
