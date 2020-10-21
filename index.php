@@ -1,36 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Doce Encanto Reborn - Bebês reborn, encontre o bebê ideal para você com a gente e conheça um pouco sobre a empresa.">
-	<meta property="og:type" content="website"/>
-	<meta property="og:title" content="Doce Encanto Reborn | Home - Bebês reborn"/>
-	<meta property="og:description" content="Doce Encanto Reborn - Bebês reborn, encontre o bebê ideal para você com a gente e conheça um pouco sobre a empresa"/>
-	<meta property="og:url" content="https://doce-encanto-reborn.com"/>
-	<meta property="og:image" content="https://doce-encanto.com/img/og-doce-encanto-reborn.png"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&family=Poly&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Doce Encanto Reborn | Home - Bebês reborn</title>
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <h1 class="logo"><a href="index.html">Doce encanto reborn</a></h1>
-
-            <nav class="menu-nav">
-                <ul class="linha">
-                    <li><a href="index.html" class="ativo"><span>Home</span></a></li>
-                    <li><a href="produtos.html"><span>Produtos</span></a></li>
-                    <li><a href="contato.html"><span>Contato</span></a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<?php get_header(); ?>
 
     <section class="intro-home">
         <h1>Todo o cuidado ao realizar o sonhos de nossas mamães</h1>
@@ -142,28 +110,4 @@
         </div>
     </section>
 
-    <footer class="footer">
-       <div class="container infos">
-            <h1 class="logo">Doce encanto reborn</h1>
-
-            <ul class="redes-sociais linha">
-                <li><a href="https://www.facebook.com/Doce-encanto-reborn-108866927616984/" class="facebook" target="_blank"><img src="img/icones/social_facebook.svg" alt="Facebook"></a></li>
-                <li><a href="#" target="_blank"><img src="img/icones/social_instagram.svg" alt="Instagram"></a></li>
-                <li><a href="https://api.whatsapp.com/send?phone=5511985009022" target="_blank"><img src="img/icones/social_whatsapp.svg" alt="Whatsapp"></a></li>
-            </ul>
-
-            <nav class="menu-nav">
-                <ul class="linha">
-                    <li><a href="index.html" class="ativo"><span>Home</span></a></li>
-                    <li><a href="produtos.html"><span>Produtos</span></a></li>
-                    <li><a href="contato.html"><span>Contato</span></a></li>
-                </ul>
-            </nav>
-       </div>
-
-       <div class="copy">
-            <p>© Doce encanto reborn 2020 | Todas as fotos do site tem direitos autorais</p>
-       </div>
-    </footer>
-</body>
-</html>
+<?php get_footer(); ?>
