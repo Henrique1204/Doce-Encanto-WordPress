@@ -15,18 +15,18 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type="image/x-icon">
-    <title>Doce Encanto Reborn | <?php wp_title(); ?></title>
+    <title>Doce Encanto Reborn <?php wp_title(" | "); ?></title>
     <!-- Header WP -->
     <?php wp_head(); ?>
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <h1 class="logo"><a href="index.html">Doce encanto reborn</a></h1>
+            <h1 class="logo"><a href="/">Doce encanto reborn</a></h1>
 
             <nav class="menu-nav">
                 <ul class="linha">
-                    <li><a href="index.html" class="ativo"><span>Home</span></a></li>
+                    <li><a href="index.html"><span>Home</span></a></li>
                     <li><a href="produtos.html"><span>Produtos</span></a></li>
                     <li><a href="contato.html"><span>Contato</span></a></li>
                 </ul>

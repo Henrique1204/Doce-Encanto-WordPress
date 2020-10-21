@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php
+    //Template Name: Home
+    get_header();
+?>
 
     <section class="intro-home">
         <h1>Todo o cuidado ao realizar o sonhos de nossas mamães</h1>
@@ -11,7 +14,7 @@
         <ul class="container">
             <li class="card">
                 <div class="img-container">
-                    <img src="img/kit-bb.png" alt="Foto do bebê">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/kit-bb.png" alt="Foto do bebê">
                 </div>
 
                 <span class="divisor"></span>
@@ -19,13 +22,13 @@
                 <div class="card-info">
                     <h2>Kit Sei lá das quantas</h2>
                     <p>Bebe sabe se lá das quantas, vem com tudo isso aqui oh, dois braço, duas pernas, alguns olhos, o cobertor é meu</p>
-                    <a href="produtos.html">Ver Fotos</a>
+                    <a href="/produtos">Ver Fotos</a>
                 </div>
             </li>
 
             <li class="card">
                 <div class="img-container">
-                    <img src="img/kit-bb.png" alt="Foto do bebê">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/kit-bb.png" alt="Foto do bebê">
                 </div>
 
                 <span class="divisor"></span>
@@ -33,13 +36,13 @@
                 <div class="card-info">
                     <h2>Kit Sei lá das quantas</h2>
                     <p>Bebe sabe se lá das quantas, vem com tudo isso aqui oh, dois braço, duas pernas, alguns olhos, o cobertor é meu</p>
-                    <a href="produtos.html">Ver Fotos</a>
+                    <a href="/produtos">Ver Fotos</a>
                 </div>
             </li>
 
             <li class="card">
                 <div class="img-container">
-                    <img src="img/kit-bb.png" alt="Foto do bebê">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/kit-bb.png" alt="Foto do bebê">
                 </div>
 
                 <span class="divisor"></span>
@@ -47,7 +50,7 @@
                 <div class="card-info">
                     <h2>Kit Sei lá das quantas</h2>
                     <p>Bebe sabe se lá das quantas, vem com tudo isso aqui oh, dois braço, duas pernas, alguns olhos, o cobertor é meu</p>
-                    <a href="produtos.html">Ver Fotos</a>
+                    <a href="/produtos">Ver Fotos</a>
                 </div>
             </li>
         </ul>
@@ -59,7 +62,7 @@
         <ul class="container">
             <li>
                 <div class="icon-container">
-                    <img src="img/icones/confiança.svg" alt="Ilustração sobre confiança">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icones/confiança.svg" alt="Ilustração sobre confiança">
                 </div>
 
                 <h2>Confiança</h2>
@@ -69,7 +72,7 @@
 
             <li>
                 <div class="icon-container">
-                    <img src="img/icones/carinho.svg" alt="Ilustração sobre carinho ao trabalhar">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icones/carinho.svg" alt="Ilustração sobre carinho ao trabalhar">
                 </div>
 
                 <h2>Carinho</h2>
@@ -79,7 +82,7 @@
 
             <li>
                 <div class="icon-container">
-                    <img src="img/icones/determinacao.svg" alt="Ilustração sobre determinação">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icones/determinacao.svg" alt="Ilustração sobre determinação">
                 </div>
 
                 <h2>determinação</h2>
