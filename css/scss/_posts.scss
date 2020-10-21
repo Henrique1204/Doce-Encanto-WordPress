@@ -1,0 +1,62 @@
+.posts {
+    padding: $d-grande 0;
+
+    h1 {
+        @include titulo-sessao;
+        margin-bottom: $d-media;
+    }
+
+    ul li {
+        @include grid(6);
+        @include sombra(8px 8px 16px rgba(0, 0, 0, 0.25));
+
+        padding: $d-pequena;
+        border-radius: 5px;
+        margin-top: $d-pequena;
+        background-color: $branco-1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            font-family: $titulo;
+            font-size: em(28);
+            font-weight: bold;
+            color: $primaria;
+        }
+
+        .conteudo {
+            max-width: 320px;
+            margin: $d-media auto 0;
+            font-family: $corpo-texto;
+            font-size: em(18);
+            text-align: center;
+            line-height: 1.4em;
+            color: $cinza-1;
+        }
+    }
+}
+
+.nao_encontrada {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        @include titulo-sessao;
+    }
+
+    p {
+        @include subtitulo-sessao;
+
+        max-width: 600px;
+        padding: 0 $d-media;
+    }
+
+    a {
+        @include btn;
+    }
+}

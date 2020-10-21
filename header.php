@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type="image/x-icon">
-    <title>Doce Encanto Reborn | <?php wp_title(); ?> - Bebês reborn</title>
+    <title>Doce Encanto Reborn | <?php wp_title(); ?></title>
     <!-- Header WP -->
     <?php wp_head(); ?>
 </head>
