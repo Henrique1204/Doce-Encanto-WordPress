@@ -9,11 +9,13 @@
             </ul>
 
             <nav class="menu-nav">
-                <ul class="linha">
-                    <li><a href="index.html"><span>Home</span></a></li>
-                    <li><a href="produtos.html"><span>Produtos</span></a></li>
-                    <li><a href="contato.html"><span>Contato</span></a></li>
-                </ul>
+                <?php $args = array(
+                    'menu' => 'principal',
+                    'theme_location' => 'menu-principal',
+                    'container' => false
+                    );
+                    wp_nav_menu($args);
+                ?>
             </nav>
        </div>
 

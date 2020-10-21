@@ -75,7 +75,7 @@
                 <button type="submit">Enviar</button>
             </form>
 
-            <p>Este é só o primeiro passo, logo após isso eu entrarei com contato com você para alinhar melhor o pedido. Caso tenha alguma dúvida sobre o processo entre em <a href="contato.html">contato</a>.</p>
+            <p>Este é só o primeiro passo, logo após isso eu entrarei com contato com você para alinhar melhor o pedido. Caso tenha alguma dúvida sobre o processo entre em <a href="/contato">contato</a>.</p>
         </div>
     </section>
 

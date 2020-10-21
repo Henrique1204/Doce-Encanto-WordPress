@@ -58,7 +58,13 @@ img {
 
 .menu-nav {
     ul {
+        margin-left: -$gutter / 2;
+        margin-right: -$gutter / 2;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: flex-end;
+        align-items: center;
+        position: relative;
         
         li + li {
             margin-left: $d-pequena;
@@ -68,13 +74,10 @@ img {
             padding: 15px 10px;
             font-family: $titulo;
             font-size: em(18);
-            
-            span {
-                display: block;
-                position: relative;
-            }
+            display: block;
+            position: relative;
 
-            span::after {
+            &::after {
                 content: "";
                 width: 0px;
                 height: 3px;
@@ -84,13 +87,13 @@ img {
                 position: absolute;
                 transition: 0.4s all ease;
             }
-            
-            span:hover::after, &.ativo span::after {
-                width: 100%;
-                background-color: currentColor;
-            }
         }
         
+        a:hover::after, .current_page_item a::after {
+            width: calc(100% - 20px);
+            background-color: currentColor;
+        }
+
         @include responsividade() {
             justify-content: center;
         }

@@ -11,8 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&family=Poly&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type="image/x-icon">
     <title>Doce Encanto Reborn <?php wp_title(" | "); ?></title>
@@ -25,11 +23,13 @@
             <h1 class="logo"><a href="/">Doce encanto reborn</a></h1>
 
             <nav class="menu-nav">
-                <ul class="linha">
-                    <li><a href="index.html"><span>Home</span></a></li>
-                    <li><a href="produtos.html"><span>Produtos</span></a></li>
-                    <li><a href="contato.html"><span>Contato</span></a></li>
-                </ul>
+                <?php $args = array(
+                    'menu' => 'principal',
+                    'theme_location' => 'menu-principal',
+                    'container' => false
+                    );
+                    wp_nav_menu($args);
+                ?>
             </nav>
         </div>
     </header>
