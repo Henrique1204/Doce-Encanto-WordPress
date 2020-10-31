@@ -39,3 +39,16 @@ function registrar_menu_principal() {
 }
 
 add_action('init', 'registrar_menu_principal');
+
+function pegar_campo($key, $page_id = 0) {
+    $id = $page_id === 0 ? get_the_ID() : $page_id;
+
+    return get_post_meta($id, $key, true);
+}
+
+function definir_campo($key, $page_id = 0) {
+    echo pegar_campo($key, $page_id);
+}
+
+// Adicionando os arquivos para campos personalizados na home.
+include(get_template_directory().'/campos_cmb2/cmb2_home.php');
