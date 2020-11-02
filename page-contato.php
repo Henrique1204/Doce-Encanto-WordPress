@@ -3,26 +3,22 @@
     get_header();
 ?>
     
-    <section class="intro">
-        <h1>Contato</h1>
-    </section>
+    <?php include(get_template_directory().'/inc/intro.php'); ?>
 
     <section class="faq">
         <h1>FAQ</h1>
-        <p>Nossas dúvidas frequentes</p>
+        <p><?php definir_campo("subtitulo_faq"); ?></p>
 
         <dl class="faq-lista container" data-script="accordion-list">
-            <dt class="ativo">Posso dar banho neles?</dt>
-            <dd class="ativo">Pode, contanto que tu entenda QUE É UM BEBÊ PINTADO  e que a tinta vá sair, mas o bebê é teu, tu faz o que quiser com ele, cobro 50tinha pra repintar ele.</dd>
+            <?php
+                $perguntas = pegar_campo("perguntas_frequentes");
 
-            <dt>Posso dar banho neles?</dt>
-            <dd>Pode, contanto que tu entenda QUE É UM BEBÊ PINTADO  e que a tinta vá sair, mas o bebê é teu, tu faz o que quiser com ele, cobro 50tinha pra repintar ele.</dd>
-
-            <dt>Posso dar banho neles?</dt>
-            <dd>Pode, contanto que tu entenda QUE É UM BEBÊ PINTADO  e que a tinta vá sair, mas o bebê é teu, tu faz o que quiser com ele, cobro 50tinha pra repintar ele.</dd>
-
-            <dt>Posso dar banho neles?</dt>
-            <dd>Pode, contanto que tu entenda QUE É UM BEBÊ PINTADO  e que a tinta vá sair, mas o bebê é teu, tu faz o que quiser com ele, cobro 50tinha pra repintar ele.</dd>
+                if (isset($perguntas)) {
+                    foreach ($perguntas as $pergunta) {
+            ?>
+                <dt><?= $pergunta["pergunta_faq"]; ?></dt>
+                <dd><?= $pergunta["resposta_faq"]; ?></dd>
+            <?php } } ?>
         </dl>
     </section>
 
@@ -57,9 +53,18 @@
             <div class="redes-sociais">
                 <h2>Redes Sociais</h2>
                 <ul class="linha">
-                    <li><a href="https://www.facebook.com/Doce-encanto-reborn-108866927616984/" class="facebook" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/icones/social_facebook_contato.svg" alt="Facebook"></a></li>
-                    <li><a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/icones/social_instagram_contato.svg" alt="Instagram"></a></li>
-                    <li><a href="https://api.whatsapp.com/send?phone=5511985009022" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/icones/social_whatsapp_contato.svg" alt="Whatsapp"></a></li>
+                    <?php
+                        $links = pegar_campo("links_sociais");
+
+                        if (isset($links)) {
+                            foreach ($links as $link) {
+                    ?>
+                        <li>
+                            <a href="<?= $link["link_rede"]; ?>" target="_blank">
+                                <img src="<?= $link["icone_rede"]; ?>" alt="<?= $link["nome_rede"]; ?>">
+                            </a>
+                        </li>
+                    <?php } } ?>
                 </ul>
             </div>
         </div>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Doce Encanto Reborn - Bebês reborn, encontre o bebê ideal para você com a gente e conheça um pouco sobre a empresa.">
 	<meta property="og:type" content="website"/>
-	<meta property="og:title" content="Doce Encanto Reborn | Home - Bebês reborn"/>
+	<meta property="og:title" content="Doce Encanto Reborn <?php wp_title(" | "); ?> - Bebês reborn"/>
 	<meta property="og:description" content="Doce Encanto Reborn - Bebês reborn, encontre o bebê ideal para você com a gente e conheça um pouco sobre a empresa"/>
 	<meta property="og:url" content="https://doce-encanto-reborn.com"/>
 	<meta property="og:image" content="https://doce-encanto.com/img/og-doce-encanto-reborn.png"/>

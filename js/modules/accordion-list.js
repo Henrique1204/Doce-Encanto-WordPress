@@ -31,6 +31,7 @@ export default class AccordionList {
 
     iniciar() {
         if (this.accordinList.length) {
+            this.toggleAccordion(this.accordinList[0]);
             this.addEvento();
         }
 
