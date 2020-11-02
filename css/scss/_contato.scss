@@ -122,10 +122,6 @@
             background-color: $primaria;
             overflow: hidden;
             display: block;
-
-            &.facebook {
-                padding: 5px;
-            }
         }
 
         @include responsividade() {

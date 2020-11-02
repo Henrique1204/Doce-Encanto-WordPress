@@ -3,9 +3,19 @@
             <h1 class="logo">Doce encanto reborn</h1>
 
             <ul class="redes-sociais linha">
-                <li><a href="https://www.facebook.com/Doce-encanto-reborn-108866927616984/" class="facebook" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/icones/social_facebook.svg" alt="Facebook"></a></li>
-                <li><a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/icones/social_instagram.svg" alt="Instagram"></a></li>
-                <li><a href="https://api.whatsapp.com/send?phone=5511985009022" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/icones/social_whatsapp.svg" alt="Whatsapp"></a></li>
+                <?php
+                    $contato = get_page_by_title("contato")->ID;
+                    $links = pegar_campo("links_sociais", $contato);
+
+                    if (isset($links)) {
+                        foreach ($links as $link) {
+                ?>
+                    <li>
+                        <a href="<?= $link["link_rede"]; ?>" target="_blank">
+                            <img src="<?= $link["icone_rede"]; ?>" alt="<?= $link["nome_rede"]; ?>">
+                        </a>
+                    </li>
+                <?php } } ?>
             </ul>
 
             <nav class="menu-nav">
@@ -20,7 +30,7 @@
        </div>
 
        <div class="copy">
-            <p>© Doce encanto reborn 2020 | Todas as fotos do site tem direitos autorais</p>
+            <p>© Doce encanto reborn <?= date("Y"); ?> | Todas as fotos do site tem direitos autorais.</p>
        </div>
     </footer>
     <!-- Footer WP -->
