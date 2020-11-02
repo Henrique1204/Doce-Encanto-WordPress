@@ -57,6 +57,12 @@ $tela-pequena: 300px;
     position: relative;
 }
 
+.centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 // grid
 @mixin grid($coluna) {
     $largura: $coluna / $colunas * 100 + "%";

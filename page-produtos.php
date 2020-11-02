@@ -3,46 +3,33 @@
     get_header();
 ?>
     
-    <section class="intro">
-        <h1>Produtos</h1>
-    </section>
+    <?php include(get_template_directory().'/inc/intro.php'); ?>
 
     <section class="galeria">
         <h1>Galeria</h1>
-        <p>Fotos de alguns de nossos trabalhos já feitos.</p>
+        <p><?php definir_campo("subtitulo_galeria"); ?></p>
 
         <div class="slide-wrapper">
             <ul class="slide">
-                <li class="fotos">
-                    <div class="f1"></div>
-                    <div class="f2"></div>
-                    <div class="f3"></div>
-                    <h2>Kit tudo preto</h2>
-                </li>
-                <li class="fotos">
-                    <div class="f1"></div>
-                    <div class="f2"></div>
-                    <div class="f3"></div>
-                    <h2>Kit tudo preto</h2>
-                </li>
-                <li class="fotos">
-                    <div class="f1"></div>
-                    <div class="f2"></div>
-                    <div class="f3"></div>
-                    <h2>Kit tudo preto</h2>
-                </li>
-                <li class="fotos">
-                    <div class="f1"></div>
-                    <div class="f2"></div>
-                    <div class="f3"></div>
-                    <h2>Kit tudo preto</h2>
-                </li>
-                <li class="fotos">
-                    <div class="f1"></div>
-                    <div class="f2"></div>
-                    <div class="f3"></div>
-                    <h2>Kit tudo preto</h2>
-                </li>
+                <?php
+                    $slide_imgs = pegar_campo("slide_galeria");
+
+                    if (isset($slide_imgs)) {
+                        foreach ($slide_imgs as $img) {                    
+                ?>
+                    <li class="fotos">
+                        <div class="f1 centralizar">
+                            <img src="<?= $img["img_slide_principal"]; ?>" alt="Imagem <?= $img["tituto_slide"]; ?>">
+                        </div>
+                        <div class="f2 centralizar">
+                            <img src="<?= $img["img_slide_secundaria"]; ?>" alt="Imagem <?= $img["tituto_slide"]; ?>">
+                        </div>
+                        <div class="f3 centralizar">
+                            <img src="<?= $img["img_slide_terceira"]; ?>" alt="Imagem <?= $img["tituto_slide"]; ?>">
+                        </div>
+                        <h2><?= $img["tituto_slide"]; ?></h2>
+                    </li>
+                <?php } } ?>
             </ul>
         </div>
     </section>
@@ -75,7 +62,7 @@
                 <button type="submit">Enviar</button>
             </form>
 
-            <p>Este é só o primeiro passo, logo após isso eu entrarei com contato com você para alinhar melhor o pedido. Caso tenha alguma dúvida sobre o processo entre em <a href="/contato">contato</a>.</p>
+            <p><?php definir_campo("infos_form"); ?>. Caso tenha alguma dúvida sobre o processo entre em <a href="/contato">contato</a>.</p>
         </div>
     </section>
 

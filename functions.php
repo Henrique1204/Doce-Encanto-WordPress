@@ -52,3 +52,4 @@ function definir_campo($key, $page_id = 0) {
 
 // Adicionando os arquivos para campos personalizados na home.
 include(get_template_directory().'/campos_cmb2/cmb2_home.php');
+include(get_template_directory().'/campos_cmb2/cmb2_produtos.php');

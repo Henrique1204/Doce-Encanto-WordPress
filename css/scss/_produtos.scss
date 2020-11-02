@@ -20,21 +20,27 @@
         gap: 20px;
 
         .f1 {
-            height: 200px;
+            height: 300px;
+            border: 2px solid $branco-2;
+            border-radius: 5px;
             grid-area: foto-1;
-            background-color: #000;
+            overflow: hidden;
         }
 
         .f2 {
-            height: 200px;
+            height: 250px;
+            border: 2px solid $branco-2;
+            border-radius: 5px;
             grid-area: foto-2;
-            background-color: #000;
+            overflow: hidden;
         }
 
         .f3 {
-            height: 200px;
+            height: 250px;
+            border: 2px solid $branco-2;
+            border-radius: 5px;
             grid-area: foto-3;
-            background-color: #000;
+            overflow: hidden;
         }
 
         h2 {
